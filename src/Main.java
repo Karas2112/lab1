@@ -1,4 +1,5 @@
 import java.util.Date;
+
 public class Main {
     public Main() {
     }
@@ -24,15 +25,17 @@ public class Main {
         pierdzikółko.model = "308SW";
         pierdzikółko.mileage = 123000.0;
         pierdzikółko.doorsQuantity = 5;
+        pierdzikółko.value = 200000.0;
         Human me = new Human();
         me.firstName = "Bartosz";
         me.lastName = "Karaś";
         me.pet = cat;
+        me.setSalary(5000.0);
         System.out.println("I have a " + me.pet.species);
         System.out.println("I call it  " + me.pet.name);
-        me.car = pierdzikółko;
-        System.out.println("I have a car, which is " + me.car.producer + " " + me.car.model);
-        System.out.println("It has " + me.car.doorsQuantity + " doors and I was driving it for the last " + me.car.mileage + "km");
+        me.setCar(pierdzikółko);
+        System.out.println("I have a car, which is " + me.getCar().producer + " " + me.getCar().model);
+        System.out.println("It has " + me.getCar().doorsQuantity + " doors and I was driving it for the last " + me.getCar().mileage + "km");
         System.out.println(me.pet.weight);
         me.pet.feed();
         System.out.println(me.pet.weight);
@@ -53,8 +56,6 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
-
-        me.setSalary(1000.0);
 
 
 

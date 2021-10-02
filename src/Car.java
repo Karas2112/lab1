@@ -4,7 +4,7 @@ public class Car {
     String model;
     Double mileage;
     Integer doorsQuantity;
-
+    Double value;
     public Car() {
     }
 }
