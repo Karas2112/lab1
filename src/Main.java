@@ -1,4 +1,4 @@
-
+import java.util.Date;
 public class Main {
     public Main() {
     }
@@ -53,5 +53,11 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
+
+        me.setSalary(1000.0);
+
+
+
     }
+
 }
