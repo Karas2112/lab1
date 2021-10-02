@@ -7,25 +7,33 @@ public class Main {
     public static void main(String[] args) {
         Animal dog = new Animal("szczur");
         Animal cat = new Animal("felis");
+
         dog.name = "Poppy";
         dog.weight = 10.0;
         dog.age = 5;
         dog.alive = false;
         cat.name = "Cezary";
         cat.age = 19;
+
         cat.introduceYourself();
+
         System.out.println("waga kota: " + cat.weight);
         cat.doYouLike("mouse");
+
         Integer humanage = cat.getHumanAge();
         System.out.println("If I'll be human I'll be " + humanage + " years old");
+
         dog.introduceYourself();
+
         dog.doYouLike("mouse");
+
         Car pierdzikółko = new Car();
         pierdzikółko.producer = "Peugeot";
         pierdzikółko.model = "308SW";
         pierdzikółko.mileage = 123000.0;
         pierdzikółko.doorsQuantity = 5;
         pierdzikółko.value = 200000.0;
+
         Human me = new Human();
         me.firstName = "Bartosz";
         me.lastName = "Karaś";
