@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Device;
 import com.company.devices.Phone;
 
 public class Main {
@@ -73,6 +74,9 @@ public class Main {
 
         System.out.println(dog);
         System.out.println(cat);
+
+
+
 
     }
 

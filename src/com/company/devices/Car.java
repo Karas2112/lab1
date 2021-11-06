@@ -1,6 +1,9 @@
 package com.company.devices;
 
-public class Car extends Device{
+import com.company.Human;
+import com.company.Saleable;
+
+public class Car extends Device implements Saleable {
 
     public Car(String producer, String model, Double mileage, Integer doorsQuantity, Double value, Integer yearOfProduction) {
         super(producer, model, yearOfProduction);
@@ -15,4 +18,14 @@ public class Car extends Device{
 
     public Integer doorsQuantity;
     public Double mileage;
+
+    @Override
+    public void turnOn() {
+        System.out.println("Włącz telefon");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
+    }
 }
