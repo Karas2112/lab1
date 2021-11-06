@@ -49,4 +49,8 @@ public class Human {
         return this.car;
     }
 
+    public String toString() {
+        return firstName + " " + lastName + " " + age + " " + salary + " " + pet + " "+car;
+    }
+
 }

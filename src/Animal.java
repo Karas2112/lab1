@@ -64,5 +64,8 @@ public class Animal {
                 System.out.println("u can't take dead animal for a walk retard");
         }
     }
+    public String toString(){
+        return species+" "+name+" "+weight+" "+age+" "+alive;
+    }
 }
 

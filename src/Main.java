@@ -38,7 +38,7 @@ public class Main {
         me.firstName = "Bartosz";
         me.lastName = "Karaś";
         me.pet = cat;
-        me.setSalary(5000.0);
+        me.setSalary(30000.0);
 
         System.out.println("I have a " + me.pet.species);
         System.out.println("I call it  " + me.pet.name);
@@ -47,7 +47,7 @@ public class Main {
         if(me.getCar()!=null){
             System.out.println(me.getCar().model);
         }
-
+        System.out.println(cat);
         System.out.println("I have a car, which is " + me.getCar().producer + " " + me.getCar().model);
         System.out.println("It has " + me.getCar().doorsQuantity + " doors and I was driving it for the last " + me.getCar().mileage + "km");
         System.out.println(me.pet.weight);
@@ -71,6 +71,8 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
 
+        System.out.println(dog);
+        System.out.println(cat);
 
 
     }
