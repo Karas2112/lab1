@@ -1,4 +1,7 @@
-import java.util.Date;
+package com.company;
+
+import devices.Car;
+import devices.Phone;
 
 public class Main {
     public Main() {
@@ -27,12 +30,8 @@ public class Main {
 
         dog.doYouLike("mouse");
 
-        Car pierdzikółko = new Car();
-        pierdzikółko.producer = "Peugeot";
-        pierdzikółko.model = "308SW";
-        pierdzikółko.mileage = 123000.0;
-        pierdzikółko.doorsQuantity = 5;
-        pierdzikółko.value = 200000.0;
+        Car pierdzikółko = new Car("Peugeot", "308SW", 123000., 5, 200000.);
+
 
         Phone MiA1 = new Phone();
         MiA1.display_size = 6.0;

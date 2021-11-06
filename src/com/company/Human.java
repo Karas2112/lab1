@@ -1,3 +1,8 @@
+package com.company;
+
+import com.company.Animal;
+import devices.Car;
+import devices.Phone;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;

@@ -1,9 +1,11 @@
+package devices;
+
 public class Phone {
-    String producer;
-    String model;
-    String platform;
-    Integer rom_memory;
-    Double display_size;
+    public double display_size;
+    public String producer;
+    public String model;
+    public String platform;
+    public Integer rom_memory;
 
     public Phone(){
     }
