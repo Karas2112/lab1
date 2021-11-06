@@ -1,7 +1,7 @@
 package com.company;
 
-import devices.Car;
-import devices.Phone;
+import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Main {
     public Main() {
@@ -30,28 +30,21 @@ public class Main {
 
         dog.doYouLike("mouse");
 
-        Car pierdzikółko = new Car("Peugeot", "308SW", 123000., 5, 200000.);
+        Car pierdzikółko = new Car("Peugeot", "308SW", 123000., 5, 200000., 2013);
 
 
-        Phone MiA1 = new Phone();
-        MiA1.display_size = 6.0;
-        MiA1.model = "A1";
-        MiA1.producer = "Xiaomi";
-        MiA1.platform = "Android";
-        MiA1.rom_memory = 64;
 
         Human me = new Human();
         me.firstName = "Bartosz";
         me.lastName = "Karaś";
         me.pet = cat;
         me.setSalary(30000.0);
-        me.phone = MiA1;
 
         System.out.println("I have a " + me.pet.species);
         System.out.println("I call it  " + me.pet.name);
         me.setCar(pierdzikółko);
 
-        if(me.getCar()!=null){
+        if (me.getCar() != null) {
             System.out.println(me.getCar().model);
         }
         System.out.println(cat);
@@ -80,7 +73,6 @@ public class Main {
 
         System.out.println(dog);
         System.out.println(cat);
-        System.out.println(me.phone);
 
     }
 

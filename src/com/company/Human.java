@@ -1,13 +1,12 @@
 package com.company;
 
-import com.company.Animal;
-import devices.Car;
-import devices.Phone;
+import com.company.devices.Car;
+import com.company.devices.Phone;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
 
-public class Human {
+public class Human extends Animal{
     String firstName;
     String lastName;
     Integer age;
@@ -16,6 +15,7 @@ public class Human {
     private Car car;
     Phone phone;
     public Human() {
+        super("homo sapiens");
         this.salary = 1200.0;
     }
 
