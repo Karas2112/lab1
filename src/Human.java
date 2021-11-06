@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Date;
 
 public class Human {
@@ -7,7 +9,7 @@ public class Human {
     private Double salary;
     Animal pet;
     private Car car;
-
+    Phone phone;
     public Human() {
         this.salary = 1200.0;
     }
@@ -32,7 +34,7 @@ public class Human {
         return this.salary;
     }
 
-    void setCar(Car newCar) {
+    void setCar(@NotNull Car newCar) {
         if (this.salary > newCar.value) {
             System.out.println("Udało sie kupic auto za gotówkę");
             this.car = newCar;

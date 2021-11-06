@@ -1,5 +1,4 @@
-
-public class Car {
+ class Car {
     String producer;
     String model;
     Double mileage;
