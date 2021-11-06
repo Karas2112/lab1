@@ -31,15 +31,17 @@ public class Main {
 
         dog.doYouLike("mouse");
 
-        Car pierdzikółko = new Car("Peugeot", "308SW", 123000., 5, 200000., 2013);
+        Car pierdzikółko = new Car("Peugeot", "308SW", 123000., 5, 50000., 2013);
 
-
+        Phone MiA1 = new Phone("Xiaomi", "A1", 2019, 800., "Android", 6., 64);
 
         Human me = new Human();
         me.firstName = "Bartosz";
         me.lastName = "Karaś";
         me.pet = cat;
         me.setSalary(30000.0);
+        me.cash=50000.;
+        me.phone=MiA1;
 
         System.out.println("I have a " + me.pet.species);
         System.out.println("I call it  " + me.pet.name);
@@ -75,6 +77,14 @@ public class Main {
         System.out.println(dog);
         System.out.println(cat);
 
+
+        Human brotherInLaw = new Human();
+
+        brotherInLaw.cash=50000;
+
+        pierdzikółko.sell(me, brotherInLaw, 30000.);
+
+        MiA1.sell(me,brotherInLaw,500.);
 
 
 

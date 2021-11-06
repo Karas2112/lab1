@@ -12,8 +12,9 @@ public class Human extends Animal{
     Integer age;
     private Double salary;
     Animal pet;
-    private Car car;
-    Phone phone;
+    public Car car;
+    public Phone phone;
+    public double cash;
     public Human() {
         super("homo sapiens");
         this.salary = 1200.0;
@@ -52,8 +53,11 @@ public class Human extends Animal{
 
     }
 
-    Car getCar() {
+    public Car getCar() {
         return this.car;
+    }
+    public Phone getPhone() {
+        return this.phone;
     }
 
     public String toString() {
