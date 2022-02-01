@@ -1,13 +1,14 @@
-package com.company;
+package creatures;
 
-public class Animal {
+public abstract class Animal implements Feedable{
+    private static final double DEFAULT_FOOD_WEIGHT = 1.;
     String species;
     String name;
     Double weight;
     Integer age;
     Boolean alive;
 
-    Animal(String species) {
+    public Animal(String species) {
         this.species = species;
         this.alive = true;
         System.out.println("zwierze utworzoned");
@@ -21,11 +22,40 @@ public class Animal {
 
     }
 
-    void introduceYourself() {
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setWeight(Double weight) {
+        this.weight = weight;
+    }
+    public Double getWeight() {
+        return weight;
+    }
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+    public String getSpecies() {
+        return species;
+    }
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+    public Integer getAge() {
+        return age;
+    }
+
+
+
+
+    public void introduceYourself() {
         System.out.println("I'm " + this.name);
     }
 
-    void doYouLike(String foodType) {
+    public void doYouLike(String foodType) {
         if (this.species == "felis" && foodType == "mouse") {
             System.out.println("yes, i like " + foodType);
         } else {
@@ -34,7 +64,7 @@ public class Animal {
 
     }
 
-    Integer getHumanAge() {
+    public Integer getHumanAge() {
         if (this.species == "szczur") {
             return this.age * 7;
         } else {
@@ -42,18 +72,20 @@ public class Animal {
         }
     }
 
-    void feed() {
-        if (this.alive) {
-            System.out.println("You fed your animal, its weight skyrockets xD");
-            this.weight = this.weight + 1.0;
+    public void feed() {
+        this.feed(DEFAULT_FOOD_WEIGHT);
+    }
+    public void feed(Double foodWeight){
+        if(this.weight <= 0){
+            System.out.println("Za późno na karmienie, zwierzak nie żyje... ");
         }
-        else {
-            System.out.println("u can't feed dead animal retard");
+        else{
+            this.weight += foodWeight;
+            System.out.println("mniam ");
         }
-
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (this.alive) {
             System.out.println("You took your animal for a walk, its weight lowers");
             this.weight = this.weight - 1.0;
