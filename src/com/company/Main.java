@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.devices.Car;
 import com.company.devices.Phone;
+import com.company.devices.cars.Diesel;
 import creatures.Animal;
 import creatures.Pet;
 
@@ -30,7 +31,7 @@ public class Main {
 
         dog.doYouLike("mouse");
 
-        Car pierdzikółko = new Car("Peugeot", "308SW", 123000., 5, 50000., 2013);
+        Car pierdzikółko = new Diesel("Peugeot", "308SW", 123000., 5, 50000., 2013);
 
         Phone MiA1 = new Phone("Xiaomi", "A1", 2019, 800., "Android", 6., 64);
 
