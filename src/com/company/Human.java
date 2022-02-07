@@ -2,11 +2,11 @@ package com.company;
 
 import com.company.devices.Car;
 import com.company.devices.Phone;
-import org.jetbrains.annotations.NotNull;
+import creatures.Animal;
 
 import java.util.Date;
 
-public class Human extends Animal{
+public class Human extends Animal {
     String firstName;
     String lastName;
     Integer age;
@@ -40,7 +40,7 @@ public class Human extends Animal{
         return this.salary;
     }
 
-    void setCar(@NotNull Car newCar) {
+    void setCar(Car newCar) {
         if (this.salary > newCar.value) {
             System.out.println("Udało sie kupic auto za gotówkę");
             this.car = newCar;
@@ -65,5 +65,8 @@ public class Human extends Animal{
     }
 
 
+    @Override
+    public void feed(Double foodWeight) {
 
+    }
 }

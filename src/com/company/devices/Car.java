@@ -3,7 +3,7 @@ package com.company.devices;
 import com.company.Human;
 import com.company.Saleable;
 
-public class Car extends Device implements Saleable {
+public abstract class Car extends Device implements Saleable {
 
     public Car(String producer, String model, Double mileage, Integer doorsQuantity, Double value, Integer yearOfProduction) {
         super(producer, model, yearOfProduction);
@@ -43,4 +43,5 @@ public class Car extends Device implements Saleable {
             System.out.println("Transakcja przebieła pomyślnie, kupiono "+this);
         }
     }
+    public abstract void refuel();
 }
