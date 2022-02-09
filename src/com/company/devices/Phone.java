@@ -74,7 +74,7 @@ public class Phone extends Device {
     }
 
     public void installAnApp(List<String> appNames) {
-        for (String appName : appNames){
+        for (String appName : appNames) {
 
         }
     }

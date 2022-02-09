@@ -13,7 +13,7 @@ public abstract class Car extends Device implements Saleable {
     }
 
     public String toString() {
-        return producer + " " + model + " " + mileage + " " + doorsQuantity + " " + value+ " " + yearOfProduction;
+        return producer + " " + model + " " + mileage + " " + doorsQuantity + " " + value + " " + yearOfProduction;
     }
 
     public Integer doorsQuantity;
@@ -26,22 +26,20 @@ public abstract class Car extends Device implements Saleable {
 
     @Override
     public void sell(Human seller, Human buyer, Double price) {
-        if(buyer.cash<price){
+        if (buyer.cash < price) {
             System.out.println("kupujący ma za mało kasy");
-        }
-        else if(seller.getCar()== null){
+        } else if (seller.getCar() == null) {
             System.out.println("Sprzedajacy nie ma żadnego auta");
-        }
-        else if(!seller.getCar().equals(this)){
+        } else if (!seller.getCar().equals(this)) {
             System.out.println("sprzedający nie ma tego konkretnego auta (złodziej? XD)");
-        }
-        else {
-            seller.cash +=price;
-            buyer.cash -=price;
-            seller.car = null;
-            buyer.car = this;
-            System.out.println("Transakcja przebieła pomyślnie, kupiono "+this);
+        } else {
+            seller.cash += price;
+            buyer.cash -= price;
+            seller.garage[0] = null;
+            buyer.garage[0] = this;
+            System.out.println("Transakcja przebieła pomyślnie, kupiono " + this);
         }
     }
+
     public abstract void refuel();
 }

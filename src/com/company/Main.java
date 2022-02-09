@@ -40,12 +40,12 @@ public class Main {
         me.lastName = "Karaś";
         me.pet = cat;
         me.setSalary(30000.0);
-        me.cash=50000.;
-        me.phone=MiA1;
-
+        me.cash = 50000.;
+        me.phone = MiA1;
+        me.garage[0] = pierdzikółko;
         System.out.println("I have a " + me.pet.getSpecies());
         System.out.println("I call it  " + me.pet.getName());
-        me.setCar(pierdzikółko);
+
 
         if (me.getCar() != null) {
             System.out.println(me.getCar().model);
@@ -80,11 +80,11 @@ public class Main {
 
         Human brotherInLaw = new Human();
 
-        brotherInLaw.cash=50000;
+        brotherInLaw.cash = 50000;
 
         pierdzikółko.sell(me, brotherInLaw, 30000.);
 
-        MiA1.sell(me,brotherInLaw,500.);
+        MiA1.sell(me, brotherInLaw, 500.);
 
         System.out.println((dog.getWeight()));
         dog.feed(2.);

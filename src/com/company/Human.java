@@ -12,9 +12,10 @@ public class Human extends Animal {
     Integer age;
     private Double salary;
     Animal pet;
-    public Car car;
+    public Car[] garage;
     public Phone phone;
     public double cash;
+
     public Human() {
         super("homo sapiens");
         this.salary = 1200.0;
@@ -43,10 +44,10 @@ public class Human extends Animal {
     void setCar(Car newCar) {
         if (this.salary > newCar.value) {
             System.out.println("Udało sie kupic auto za gotówkę");
-            this.car = newCar;
+            this.garage[0] = newCar;
         } else if (this.salary >= newCar.value / 12) {
             System.out.println("Udało sie kupic auto na kredyt");
-            this.car = newCar;
+            this.garage[0] = newCar;
         } else {
             System.out.println("lol biedak");
         }
@@ -54,14 +55,15 @@ public class Human extends Animal {
     }
 
     public Car getCar() {
-        return this.car;
+        return this.garage[0];
     }
+
     public Phone getPhone() {
         return this.phone;
     }
 
     public String toString() {
-        return firstName + " " + lastName + " " + age + " " + salary + " " + pet + " "+car;
+        return firstName + " " + lastName + " " + age + " " + salary + " " + pet + " " + garage[0];
     }
 
 
